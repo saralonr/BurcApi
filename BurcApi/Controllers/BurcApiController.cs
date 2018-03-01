@@ -39,10 +39,10 @@ namespace BurcApi.Controllers
                     string icerik = data.ReadToEnd();
                     int start = icerik.IndexOf("row\">")+5;
                     int end = icerik.IndexOf("</div")-1;
-                    string h1 = icerik.Substring(start, end - start);
+                    string yorum = icerik.Substring(start, end - start);
                     Burclar brc = new Burclar();
                     brc.BurcAdi = burcIsimler[i];
-                    brc.Yorum = h1;
+                    brc.Yorum = yorum;
                     burcList.Add(brc);
 
                 }
