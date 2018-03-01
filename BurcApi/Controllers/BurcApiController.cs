@@ -18,7 +18,7 @@ namespace BurcApi.Controllers
     {
         [EnableCors(origins: "*", headers: "*", methods: "*")]
         [HttpGet]
-        public List<Burclar> GetBurcs()
+        public List<Burclar> AllBurcs()
         {
             string url = "";
             List<Burclar> burcList= new List<Burclar>();
